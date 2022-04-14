@@ -4,7 +4,7 @@ export default {
         prefix: "&&"
     },
     commands: [
-        "gado"
+        "gado", ""
     ],
     messages: {
         MESSAGE_COMMAND_NOT_FOUND: "COMANDO NÃO ENCONTRADO",

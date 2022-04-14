@@ -3,17 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worthdavi/worthd4vi.gg.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/worthdavi/worthd4vi.gg/issues"
+  },
+  "homepage": "https://github.com/worthdavi/worthd4vi.gg#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.6.3"
+  },
   "dependencies": {
-    "@discordjs/rest": "^0.3.0",
-    "babel-core": "^6.26.3",
-    "discord-api-types": "^0.31.0",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0"
   }

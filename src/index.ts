@@ -1,20 +1,20 @@
-import env from 'dotenv'
+import * as env from 'dotenv';
 env.config();
 
 import Discord from 'discord.js';
-import { hasPrefix, isCommand } from './utils/commands.js'
-import config from '../config.js'
+import { hasPrefix, isCommand } from './util/commands'
+import config from './config'
 
 const client = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
     intents: ['DIRECT_MESSAGES', 'DIRECT_MESSAGE_REACTIONS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'GUILDS']
 });
 
-client.on("ready", (stream) => {
-    console.log(`Logged in as ${client.user.tag}!`);  
+client.on("ready", (stream: any) => {
+    console.log(`Logged in as ${client.user?.tag}!`);  
 });
 
-client.on("messageCreate", (message) => {
+client.on("messageCreate", (message: any) => {
     const prefix = config.application.prefix
 
     if (message.author.bot)
